@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>led</title></head><body><big><big><big><br>
+#include &lt;Wire.h&gt;<br>
+#include &lt;LiquidCrystal_I2C.h&gt;<br>
+<br>
+// Endereço do LCD (0x20 ou 32 decimal), 16 colunas e 2 linhas<br>
+LiquidCrystal_I2C lcd(0x20, 16, 2);<br>
+<br>
+void setup() {<br>
+&nbsp; lcd.init();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Inicializa o LCD<br>
+&nbsp; lcd.backlight();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Liga a luz de fundo<br>
+&nbsp; lcd.setCursor(0, 0);&nbsp; // Primeira linha<br>
+&nbsp; lcd.print("INFANTARIA");<br>
+&nbsp; lcd.setCursor(0, 1);&nbsp; // Segunda linha<br>
+&nbsp; lcd.print("LEGO"); // Mensagem fixa<br>
+&nbsp;// delay(1000); <br>
+}<br>
+<br>
+void loop() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br>
+}</big></big></big></body></html>
